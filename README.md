@@ -1,12 +1,12 @@
-# 🏛️ GovScheme Verifier
+#  GovScheme Verifier
 
 GovScheme Verifier is a comprehensive web-based platform allowing citizens to discover, verify eligibility for, and apply to various national and state-level government welfare schemes (such as PM-KISAN, PM Awas Yojana, MGNREGA, and more). It also features a secure administrative dashboard to review and manage applications.
 
 ---
 
-## ✨ Features
+##  Features
 
-### 👤 For Citizens
+###  For Citizens
 - **Scheme Discovery**: Browse an extensive catalog of active government schemes.
 - **Smart Search**: Filter schemes instantly by keyword or description.
 - **Automated Eligibility Checking**: An automated engine cross-references citizen demographics (Age, Income, Gender, Category, etc.) with strict scheme requirements to instantly generate eligibility confirmation.
@@ -29,7 +29,7 @@ GovScheme Verifier is a comprehensive web-based platform allowing citizens to di
 
 ---
 
-## 🚀 Quick Start / Local Deployment
+##  Quick Start / Local Deployment
 
 ### Prerequisites
 - **Java 11+** installed (`java` and `javac` in PATH).
@@ -63,7 +63,7 @@ Simply open the `index.html` file located in the root project folder directly in
 
 ---
 
-## 🔐 Default Admin Credentials
+##  Default Admin Credentials
 To access the Admin Portal and manage schemes, use the following generated credentials:
 - **Username:** `admin@gov.in`
 - **Password:** `admin123`
