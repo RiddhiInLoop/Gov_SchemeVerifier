@@ -1,4 +1,4 @@
-# 📚 Data Dictionary
+#  Data Dictionary
 **Database Name**: `scheme_verifier_db`
 
 This data dictionary outlines the complete architecture of the database tables used in the GovScheme Verifier project.
