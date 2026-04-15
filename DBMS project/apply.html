@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply for Scheme - SchemeVerifier</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-warning border-3">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">🏛️ GovScheme Verifier</a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="schemes.html">Schemes</a></li>
+                    <li class="nav-item ms-lg-3"><a class="btn btn-outline-light" href="dashboard.html">My Dashboard</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Application Confirmation Form -->
+    <div class="container py-5 mt-4">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+                <div class="card shadow border-0 border-top border-success border-4">
+                    <div class="card-body p-5 text-center">
+                        <div class="mb-4">
+                            <span class="display-3 text-success">📝</span>
+                        </div>
+                        <h3 class="fw-bold mb-3">Confirm Scheme Application</h3>
+                        <p class="text-muted">You are about to officially submit your profile for demographic review by
+                            Government Administrators against the requested scheme.</p>
+
+                        <div class="bg-light rounded p-3 mb-4 text-start">
+                            <small class="text-uppercase fw-bold text-muted d-block mb-1">Target Scheme ID</small>
+                            <h5 id="applySchemeId" class="text-dark fw-bold mb-0">Loading...</h5>
+                        </div>
+
+                        <form id="applyForm">
+                            <div class="form-check text-start mb-4">
+                                <input class="form-check-input" type="checkbox" id="declarationCheck" required>
+                                <label class="form-check-label text-muted small" for="declarationCheck">
+                                    I authorize the automated processing of my submitted demographic data and accept
+                                    that deceptive entries may result in permanent bans from national databases.
+                                </label>
+                            </div>
+                            <div class="d-grid gap-2">
+                                <button type="submit" class="btn btn-success btn-lg fw-bold shadow-sm">Submit Official
+                                    Application</button>
+                                <a href="schemes.html" class="btn btn-light border text-muted">Cancel and Return</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script Links -->
+    <script src="js/app.js"></script>
+</body>
+
+</html>

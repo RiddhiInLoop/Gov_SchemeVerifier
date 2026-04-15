@@ -1,0 +1,36 @@
+%% Mermaid DFD (Data Flow Diagram) for Scheme Verifier
+%% Save as `architecture/dfd.mmd` and render with a Mermaid viewer
+flowchart LR
+  subgraph BROWSER[User Browser]
+    U[User]
+    F[Frontend (js/app.js + HTML/CSS)]
+  end
+
+  subgraph STATIC[Static Host]
+    S[Static Server (StaticServer.java or local static host)]
+  end
+
+  subgraph BACKEND[Java Backend]
+    API[HTTP API (Main.java + Handlers)]
+    AUTH[Auth & PasswordUtils]
+    SRV[Service Layer (Citizen, Scheme, Eligibility, Application, Admin)]
+  end
+
+  subgraph DB[Database]
+    MYSQL[(MySQL: scheme_verifier_db)]
+  end
+
+  U -->|Open pages| S
+  S -->|serves HTML/JS/CSS| F
+  F -->|fetch /api/* (JSON)| API
+  API -->|calls| SRV
+  API -->|auth checks| AUTH
+  SRV -->|JDBC queries| MYSQL
+  MYSQL -->|rows| SRV
+  SRV -->|JSON responses| API
+  API -->|JSON| F
+  F -->|render| U
+
+  %% Key data stores
+  classDef datastore fill:#f9f,stroke:#333,stroke-width:1px;
+  class MYSQL datastore
